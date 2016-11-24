@@ -1,8 +1,9 @@
-int tempPin = 0;
+const int tempPin = 0;
 
-int readTemp(){
-  int output = analogRead(tempPin);
-  float voltage = (output * 5.0)/ 1024.0;
+float readTemp(){
+  float output = analogRead(tempPin);
+  Serial.println(output);
+  float voltage = output * 0.004882814;
   float celsius = (voltage - 0.5) * 100; 
   return celsius;
   }
