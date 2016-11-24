@@ -1,5 +1,6 @@
 float celsius = 0;
 
+
 void setup(){
    Serial.begin(9600);
 }
