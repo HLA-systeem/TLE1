@@ -10,5 +10,5 @@ void loop(){
   celsius = readTemp();
   Serial.println(celsius);
   Serial.print(' Celsius');
-  delay(1000);
+
 }

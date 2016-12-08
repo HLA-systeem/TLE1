@@ -26,6 +26,16 @@ void lcdSetup(){
   lcd.begin(16,2);//dimesies van de lcd
   }
 
-void displayData(float celius,float weight,float waterlevel){
+void displayData(float celsius,float waterlevel){
+  lcd.print("Celsius: ");
+  lcd.print(celsius);
+  delay(4000); //how to delay the lcd only
+  lcd.clear;
   
+  /*
+  lcd.print("Water:");
+  lcd.print(waterlevel);
+  delay(4000);
+  lcd.clear;
+  */
   }
