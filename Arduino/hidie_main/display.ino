@@ -20,7 +20,7 @@ const int d5 = 5;
 const int d6 = 6;
 const int d7 = 7;
 
-LiguidCrystal lcd(rsPin,enablePin,d4,d5,d6,d7);
+LiquidCrystal lcd(rsPin,enablePin,d4,d5,d6,d7);
 
 void lcdSetup(){
   lcd.begin(16,2);//dimesies van de lcd
