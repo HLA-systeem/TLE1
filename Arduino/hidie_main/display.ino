@@ -13,12 +13,12 @@
 
 #include <LiquidCrystal.h>
 
-const rsPin = 1; 
-const enablePin = 2;
-const d4 = 4;
-const d5 = 5;
-const d6 = 6;
-const d7 = 7;
+const int rsPin = 1; 
+const int enablePin = 2;
+const int d4 = 4;
+const int d5 = 5;
+const int d6 = 6;
+const int d7 = 7;
 
 LiguidCrystal lcd(rsPin,enablePin,d4,d5,d6,d7);
 
@@ -26,16 +26,14 @@ void lcdSetup(){
   lcd.begin(16,2);//dimesies van de lcd
   }
 
-void displayData(float celsius,float waterlevel){
+void displayData(float celsius,char waterlevel){
   lcd.print("Celsius: ");
   lcd.print(celsius);
   delay(4000); //how to delay the lcd only
   lcd.clear;
   
-  /*
   lcd.print("Water:");
   lcd.print(waterlevel);
   delay(4000);
   lcd.clear;
-  */
   }
