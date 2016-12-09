@@ -30,10 +30,10 @@ void displayData(float celsius,char waterlevel){
   lcd.print("Celsius: ");
   lcd.print(celsius);
   delay(4000); //how to delay the lcd only
-  lcd.clear;
+  lcd.clear();
   
   lcd.print("Water:");
   lcd.print(waterlevel);
   delay(4000);
-  lcd.clear;
+  lcd.clear();
   }
