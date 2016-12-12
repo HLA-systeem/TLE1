@@ -24,6 +24,8 @@ LiquidCrystal lcd(rsPin,enablePin,d4,d5,d6,d7);
 
 void lcdSetup(){
   lcd.begin(16,2);//dimesies van de lcd
+  lcd.clear();
+  lcd.print("LCD START!");
   }
 
 void displayData(float celsius,char waterlevel){
