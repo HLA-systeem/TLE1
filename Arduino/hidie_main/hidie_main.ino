@@ -1,15 +1,21 @@
 float celsius = 0;
-char waterlevel = '0 L'; //char = '' char * = " " not the same data type
+int waterlevel = 0;
 
 void setup(){
-   Serial.begin(228800);//228800
+   Serial.begin(9600);// 9600
    lcdSetup();
+   floatSetup(); 
+   tempSetup();
+   
+    
 }
 
 void loop(){
   celsius = readTemp();
-  Serial.println(celsius);
-  Serial.print(' Celsius');
-  //displayData(celsius, waterlevel);
+//  Serial.println(celsius);
+//  Serial.print(' Celsius');
+ waterlevel = readWaterLevel(waterlevel); 
+  displayData(celsius, waterlevel);
+ 
 
 }
