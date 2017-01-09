@@ -1,4 +1,4 @@
-const int tempPin = 7;
+const int tempPin = A5;
 
 
 
@@ -8,12 +8,17 @@ const int tempPin = 7;
 
  }
 
-float readTemp(){
-  int output = analogRead(tempPin);
-  float celsius = (output - 500) / 10; 
-
+float readTemp(float temp){
+  int output = analogRead(tempPin); //151
+  Serial.println(output); 
+  temp = output - 151;
+  temp += 21.9;
+ 
+//  float celsius = (output - 0.5) / 100;
+//  celsius += 21.8;
+ 
   Serial.println(celsius);
-  return celsius;
+  return temp;
   }
 
 

@@ -1,21 +1,21 @@
 float celsius = 0;
 int waterlevel = 0;
+char light= 'auto';
 
 void setup(){
    Serial.begin(9600);// 9600
-   lcdSetup();
    floatSetup(); 
-   tempSetup();
+   lightSetup();
+   tempSetup();   
+   lcdSetup();
    
-    
 }
 
 void loop(){
-  celsius = readTemp();
+  celsius = readTemp(celsius);
 //  Serial.println(celsius);
 //  Serial.print(' Celsius');
- waterlevel = readWaterLevel(waterlevel); 
+  waterlevel = readWaterLevel(waterlevel); 
   displayData(celsius, waterlevel);
- 
 
 }

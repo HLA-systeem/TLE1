@@ -27,17 +27,21 @@ void lcdSetup(){
   lcd.clear();
   }
 
-void displayData(float celsius,int waterlevel){
+void displayData(float temp,int waterlevel){
   lcd.print("Celsius: ");
-  lcd.print(celsius);
+  lcd.print(temp);
   delay(4000); //how to delay the lcd only
   lcd.clear();
 
   if(waterlevel == 1){
-  lcd.print("Er is genoeg water");
+  lcd.print("Er is        ");
+  lcd.setCursor(0,1); 
+  lcd.print("genoeg water");
     }
   else{
-  lcd.print("Er is NIET genoeg water");
+  lcd.print("Er is NIET ");
+  lcd.setCursor(0,1);
+  lcd.println("genoeg water    ");
     }     
   delay(4000);
   lcd.clear();

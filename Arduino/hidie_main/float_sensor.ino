@@ -12,7 +12,7 @@ void floatSetup()
 }
 
 int readWaterLevel(int water){ 
-  water = digitalRead(floatsensor);  
+  water = digitalRead(floatsensor);
   return water; 
   }
 
