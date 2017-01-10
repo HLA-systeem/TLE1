@@ -1,22 +1,32 @@
-//Potentiometer moet ANALoge aangesloten worden.
-const int potPin = A0; 
-int potOutput = 0; 
+//Potentiometer moet ANALOGE aangesloten worden.
+const int greenPot = A0;
+const int yellowPot = A1; 
+const int redPot = A2; 
+const int bluePot = A3; 
+
+int greenOutput = 0; 
+int yellowOutput = 0; 
+int redOutput = 0; 
+int blueOutput = 0; 
 
 
+void lghtControl(){
+  greenOutput = analogRead(greenPot);
+  yellowOutput = analogRead(yellowPot);
+  redOutput = analogRead(redPot);
+  blueOutput = analogRead(bluePot);
 
-//void lghtControl(){
-//  outputValue = map(potOutput, 0, 1023, 0, 255);
-//  switch () {
-//    case 1:
-//      //do something when var equals 1
-//      break;
-//    case 2:
-//      //do something when var equals 2
-//      break;
-//    default: 
-//      // if nothing else matches, do the default
-//      // default is optional
-//    break;
-//  }
-//  
-// }
+/*
+  switch () {
+    case output:
+      //do something when var equals 1
+      break;
+    case 2:
+      break;
+    case 3:
+    default: 
+       
+    break;
+  }
+ */ 
+ }

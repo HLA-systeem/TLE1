@@ -30,7 +30,4 @@ void hyperRed(){
   digitalWrite(redPin, HIGH);
   }
 
- void bestieBoy(){
-  digitalWrite(redPin, HIGH);
-  digitalWrite(bluePin, HIGH);
-  }
+
