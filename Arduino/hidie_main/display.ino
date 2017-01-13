@@ -27,22 +27,35 @@ void lcdSetup(){
   lcd.clear();
   }
 
-void displayData(float temp,int waterlevel){
+void displayData(float temp,int waterlevel, char light){
   lcd.print("Celsius: ");
   lcd.print(temp);
   delay(4000); //how to delay the lcd only
   lcd.clear();
 
   if(waterlevel == 1){
-  lcd.print("Er is        ");
-  lcd.setCursor(0,1); 
-  lcd.print("genoeg water");
+    lcd.print("Er is        ");
+    lcd.setCursor(0,1); 
+    lcd.print("genoeg water");
     }
   else{
-  lcd.print("Er is NIET ");
-  lcd.setCursor(0,1);
-  lcd.println("genoeg water    ");
+    lcd.print("Er is NIET ");
+    lcd.setCursor(0,1);
+    lcd.println("genoeg water    ");
     }     
   delay(4000);
   lcd.clear();
+
+  lcd.print("Light is on ");
+  lcd.setCursor(0,1);
+  if(light == 'o'){
+    lcd.print("AUTO mode");
+    }
+  else{
+    lcd.print("MANUAL mode");
+    }
+  delay(4000);
+  lcd.clear();
   }
+
+  

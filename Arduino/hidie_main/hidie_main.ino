@@ -12,13 +12,15 @@ void setup(){
 }
 
 void loop(){
-  light = 'manual'
-  if(light == 'manual'){
+  light = 'manual';
+  if(light == 'l'){
     lightControl();
     }
   
   celsius = readTemp(celsius);
   waterlevel = readWaterLevel(waterlevel); 
-  displayData(celsius, waterlevel);
+  displayData(celsius, waterlevel, light);
 
 }
+
+//Print op de LCD of die op auto of manual staat.
