@@ -34,12 +34,12 @@ void displayData(float temp,int waterlevel, char light){
   lcd.clear();
 
   if(waterlevel == 1){
-    lcd.print("Er is        ");
+    lcd.print("Er is NIET      ");
     lcd.setCursor(0,1); 
     lcd.print("genoeg water");
     }
   else{
-    lcd.print("Er is NIET ");
+    lcd.print("Er is  ");
     lcd.setCursor(0,1);
     lcd.println("genoeg water    ");
     }     

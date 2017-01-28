@@ -23,4 +23,4 @@ void loop(){
 
 }
 
-//Print op de LCD of die op auto of manual staat.
+

@@ -10,12 +10,9 @@ const int tempPin = A5;
 
 float readTemp(float temp){
   int output = analogRead(tempPin); //151
-  //Serial.println(output); 
   temp = output - 151;
-  temp += 21.9;
+  temp += 14.9; //5 afgehaald omdat temp aan binnekant zit
  
-//  float celsius = (output - 0.5) / 100;
-//  celsius += 21.8;
  
   //Serial.println(celsius);
   return temp;
